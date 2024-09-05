@@ -28,7 +28,7 @@ const Register = () => {
     }),
     onSubmit: async (values) => {
       try {
-        await axios.post('/user/register', values);
+        await axios.post('https://server1-yt76.onrender.com/user/register', values);
         localStorage.setItem('firstLogin', 'true');
         window.location.href = "/";
       } catch (err) {
