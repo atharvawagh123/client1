@@ -12,6 +12,7 @@ export const DataProvider = ({ children }) => {
         try {
             const res = await axios.get('https://server1-yt76.onrender.com/user/refresh_token');
             setToken(res.data.accesstoken);
+             console.error(res.data.accesstoken);
             // Optionally store token in localStorage for future use
             localStorage.setItem('token', res.data.accesstoken);
         } catch (err) {
