@@ -10,7 +10,7 @@ export const DataProvider = ({ children }) => {
 
     const refreshToken = async () => {
         try {
-            const res = await axios.get('/user/refresh_token');
+            const res = await axios.get('https://server1-yt76.onrender.com/user/refresh_token');
             setToken(res.data.accesstoken);
             // Optionally store token in localStorage for future use
             localStorage.setItem('token', res.data.accesstoken);
