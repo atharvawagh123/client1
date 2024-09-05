@@ -15,7 +15,7 @@ const validationSchema = Yup.object({
 const Login = () => {
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
-      await axios.post('/user/login', values);
+      await axios.post('https://server1-yt76.onrender.com/user/login', values);
       localStorage.setItem('firstLogin', 'true');
       window.location.href = "/";
     } catch (error) {
