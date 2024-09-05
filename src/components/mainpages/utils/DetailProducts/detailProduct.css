@@ -1,0 +1,323 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;600&display=swap');
+
+/* Import Animate.css for animations */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+/* Overall Container */
+.detail-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f9f9f9; /* Light grey background for contrast */
+    color: #333; /* Dark grey for readability */
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 12px; /* More pronounced rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Deeper shadow for a more prominent effect */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Product Details Container */
+.detail-product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    margin-bottom: 2.5rem;
+    animation: animate__fadeIn 1s ease-out; /* Fade-in animation */
+}
+
+/* Product Image Section */
+.detail-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 12px; /* Matching the container’s radius */
+}
+
+.detail-image img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 12px; /* Matching the container’s radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.detail-image img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Product Information Section */
+.detail-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-info h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 1rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.detail-info h6 {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.detail-info span {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #111; /* Darker color for price */
+    margin-bottom: 1.5rem;
+}
+
+.detail-info p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin: 0.5rem 0;
+}
+
+/* Buy Now Button */
+.buy-now {
+  width: 200px;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1.5rem;
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 8px; /* More pronounced border radius */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+    animation: animate__bounceIn 1s ease; /* Bounce-in animation */
+}
+
+.buy-now:hover {
+    background-color: #555; /* Slightly lighter on hover */
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+/* Edit Product Link */
+.edit-product {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    background-color: #fff;
+    color: #333;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border: 2px solid #333; /* Thicker border */
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+    animation: animate__fadeInUp 1s ease; /* Fade-in up animation */
+}
+
+.edit-product:hover {
+    background-color: #333;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Suggested Products Section */
+.suggested-products {
+    width: 100%;
+    padding: 2rem;
+    background-color: #ffffff; /* Clean white background */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    animation: animate__fadeInLeft 1s ease; /* Fade-in left animation */
+}
+
+.suggested-products h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #222;
+}
+
+.suggested-products-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.suggested-product-card {
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    animation: animate__fadeInUp 1s ease; /* Fade-in up animation */
+}
+
+.suggested-product-card:hover {
+    transform: translateY(-5px); /* Hover effect */
+}
+
+.suggested-product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 0.75rem;
+}
+
+.suggested-product-card h4 {
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+    color: #222;
+}
+
+.suggested-product-card span {
+    display: block;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.view-details {
+    font-size: 1.1rem;
+    color: #333;
+    text-decoration: none;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.view-details:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Comments Section */
+.comment-part {
+    padding: 2rem;
+    background-color: #f0f0f0;
+    margin-top: 2rem;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.comments-section {
+    max-width: 100%;
+    margin: 0;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    animation: animate__fadeInUp 1s ease; /* Fade-in up animation */
+}
+
+.comments-section h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #222;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.comment {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.comment .profile-icon {
+    font-size: 24px;
+    color: #1da1f2;
+}
+
+.comment .username {
+    font-weight: 600;
+    color: #333;
+    margin-left: 1rem;
+}
+
+.comment .comment-comments {
+    margin-left: 1rem;
+    color: #555;
+    flex-grow: 1;
+    font-size: 0.9rem;
+}
+
+.delete-comment {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.delete-comment:hover {
+    background-color: #e60000;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.comment-form textarea {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 1rem;
+    resize: none;
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.comment-form button {
+    align-self: flex-end;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.comment-form button:hover {
+    background-color: #0056b3;
+}
+
+

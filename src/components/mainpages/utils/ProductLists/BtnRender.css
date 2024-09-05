@@ -1,0 +1,89 @@
+/* Basic styling for button row */
+.btn-container {
+  display: flex;
+  gap: 10px;
+ margin-left: 45px;
+ margin-bottom: 15px;
+}
+
+/* Common button styles */
+.btn {
+  background-color: #FFFFFF;
+  color: #000000;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  display: inline-block;
+  position: relative; /* Required for the ::after pseudo-element */
+  text-align: center;
+}
+
+/* Hover effect for all buttons */
+.btn:hover {
+  color: black;
+  border-color: #FFFFFF;
+}
+
+/* Underline effect */
+.btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000000; /* Color of the underline */
+  transition: width 0.3s ease;
+}
+
+.btn:hover::after {
+  width: 100%;
+}
+
+
+
+.btn-buy {
+  border-style: double;
+}
+
+.btn-view {
+  border-style: dotted;
+}
+.btn-delete {
+  background-color: #FFFFFF;
+  color: #000000;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  display: inline-block;
+  position: relative; /* Required for the ::after pseudo-element */
+  text-align: center;
+}
+
+/* Hover effect for all buttons */
+.btn-delete:hover {
+  color: black;
+  border-color: #FFFFFF;
+}
+
+/* Underline effect */
+.btn-delete::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000000; /* Color of the underline */
+  transition: width 0.3s ease;
+}
+
+.btn-delete:hover::after {
+  width: 100%;
+}

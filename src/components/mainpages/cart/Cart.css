@@ -1,0 +1,176 @@
+/* General Styles */
+.cart-container {
+  padding: 1.5rem;
+  background-color: #ffffff; /* White background */
+  color: #333333; /* Dark gray text for a softer look */
+  font-family: Arial, sans-serif; /* Clean and professional font */
+}
+
+.cart-summary {
+  background-color: #f9f9f9; /* Very light gray background */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cart-summary h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: #000000; /* Black text */
+  font-weight: bold;
+}
+
+.cart-summary p, .cart-summary h3, .cart-summary h4 {
+  margin: 0.5rem 0;
+  color: #666666; /* Medium gray for secondary text */
+}
+
+.cart-summary h3, .cart-summary h4 {
+  font-weight: normal;
+}
+
+.button-section {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid #000000; /* Black border for buttons */
+  border-radius: 4px;
+  color: #000000; /* Black text */
+  background-color: #ffffff; /* White background */
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+.cta:hover {
+  background-color: #f1f1f1; /* Light gray background on hover */
+  border-color: #333333; /* Darker border on hover */
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  border-color: #e74c3c; /* Red border for delete button */
+  color: #e74c3c; /* Red text */
+}
+
+.delete-btn:hover {
+  background-color: #fbe8e8; /* Light red background on hover */
+}
+
+.detail-btn {
+  border-color: #3498db; /* Blue border for detail button */
+  color: #3498db; /* Blue text */
+}
+
+.detail-btn:hover {
+  background-color: #eaf6ff; /* Light blue background on hover */
+}
+
+.error-message {
+  color: #e74c3c; /* Red for errors */
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.cart-empty {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #888888; /* Gray for empty cart message */
+  font-weight: bold;
+}
+
+/* Detail Styles */
+.detail {
+  display: flex;
+  background-color: #ffffff; /* White background */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.detail:hover {
+  background-color: #f9f9f9; /* Very light gray on hover */
+  transform: translateY(-2px);
+}
+
+.item-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 1rem;
+  border: 1px solid #dddddd; /* Light gray border for images */
+}
+
+.box-detail {
+  flex: 1;
+}
+
+.box-detail .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.box-detail h2 {
+  font-size: 1.25rem;
+  margin: 0;
+  color: #000000; /* Black text */
+}
+
+.box-detail h6 {
+  font-size: 1rem;
+  color: #666666; /* Medium gray */
+  margin: 0;
+}
+
+.box-detail span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000000; /* Black for prices */
+}
+
+.box-detail p {
+  margin: 0.5rem 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .cart-container {
+    padding: 1rem;
+  }
+
+  .cart-summary {
+    padding: 0.5rem;
+  }
+
+  .detail {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .button-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+}

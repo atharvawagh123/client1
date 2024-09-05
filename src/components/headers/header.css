@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700&display=swap');
+
+* {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    min-height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 0 20px;
+    position: relative;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header .logo a {
+    color: #000000;
+    text-decoration: none;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #444444;
+}
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-icon span {
+    background: #000000;
+    border-radius: 20px;
+    color: #FFFFFF;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 5px 7px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    header .logo {
+        margin-bottom: 10px;
+    }
+
+    header ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .cart-icon {
+        margin-top: 10px;
+        position: static; /* Removes the absolute positioning for better stacking */
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 1.2rem;
+    }
+
+    header ul li a {
+        font-size: 0.9rem;
+    }
+
+    .cart-icon span {
+        font-size: 8px;
+        padding: 4px 6px;
+    }
+}

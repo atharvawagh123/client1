@@ -1,0 +1,96 @@
+/* EditProduct.css */
+
+.edit-product-container {
+    padding: 30px;
+    max-width: 600px;
+    margin: auto;
+    background-color: #ffffff; /* White background for the container */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0; /* Light gray border for subtle definition */
+}
+
+.edit-product-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.edit-product-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+    color: #333333; /* Dark gray text color */
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc; /* Light gray border */
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333333; /* Dark gray text color */
+    background-color: #ffffff; /* White background for input fields */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: #000000; /* Black border on focus */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.form-textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.submit-button {
+    padding: 12px 18px;
+    background-color: #000000; /* Black background for button */
+    color: #ffffff; /* White text color */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #333333; /* Darker black for hover effect */
+    transform: translateY(-2px);
+}
+
+.submit-button:active {
+    background-color: #000000; /* Keep the same black color on click */
+    transform: translateY(0);
+}
+
+.loading-text {
+    text-align: center;
+    font-size: 1.2em;
+    color: #666666; /* Gray color for loading text */
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

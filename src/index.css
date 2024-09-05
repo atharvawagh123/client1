@@ -1,0 +1,10 @@
+@import url("./components/headers/header.css");
+@import url("./components/mainpages/products/products.css");
+@import url("./components/mainpages/utils/DetailProducts/detailProduct.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+

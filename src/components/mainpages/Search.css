@@ -1,0 +1,195 @@
+/* Main container for the search component */
+.search-main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F7F9FC; /* Light Blue-Gray background */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Container for the search input, icon button, and select box */
+.search-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+/* Styling for the search input field */
+.search-input {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid #CED4DA; /* Light Gray border */
+    border-radius: 8px;
+    width: 300px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    background-color: #FFFFFF; /* White background */
+}
+
+.search-input:focus {
+    border-color: #007BFF; /* Bright Blue border on focus */
+    outline: none;
+    background-color: #EBF5FF; /* Light Blue background on focus */
+}
+
+/* Styling for the search icon button */
+.search-input-container .BsSearchHeartFill {
+    font-size: 1.8rem;
+    color: #007BFF; /* Bright Blue color */
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.search-input-container .BsSearchHeartFill:hover {
+    color: #007BFF; /* Same Blue color */
+    transform: scale(1.1) rotate(15deg); /* Adds a slight rotation effect */
+}
+
+/* Styling for the price range select dropdown */
+.price-range-select {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid #CED4DA; /* Light Gray border */
+    border-radius: 8px;
+    background-color: #FFFFFF; /* White background */
+    transition: border-color 0.3s ease;
+}
+
+.price-range-select:focus {
+    border-color: #007BFF; /* Bright Blue border on focus */
+    outline: none;
+}
+
+/* Styling for the product list */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Styling for the product card container */
+.product-item {
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #FFFFFF; /* White background */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 280px;
+    margin: 15px;
+    position: relative;
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the product image */
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover .product-image {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Container for product details */
+.product-details {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Styling for the product title */
+.product-title {
+    font-size: 1.2rem;
+    color: #333333; /* Dark Gray color */
+    margin: 10px 0;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Underline effect for the title on hover */
+.product-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #007BFF; /* Bright Blue color */
+    transition: width 0.3s ease;
+}
+
+.product-title:hover::after {
+    width: 100%;
+}
+
+/* Styling for the product price */
+.product-price {
+    display: block;
+    font-size: 1.3rem;
+    color: #007BFF; /* Bright Blue color */
+    margin: 5px 0;
+}
+
+/* Styling for the product description */
+.product-description {
+    font-size: 1rem;
+    color: #666666; /* Medium Gray color */
+    margin: 10px 0;
+}
+
+/* Styling for action buttons */
+.product-actions button {
+    border: 1px solid #007BFF; /* Bright Blue border */
+    background-color: #FFFFFF; /* White background */
+    color: #007BFF; /* Bright Blue text color */
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.product-actions button:hover {
+    background-color: #007BFF; /* Bright Blue background on hover */
+    color: #FFFFFF; /* White text color on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.product-actions{
+    animation: fadeIn 0.5s ease-in-out;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+
+/* Fade-in and up animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
