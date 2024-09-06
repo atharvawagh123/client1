@@ -1,42 +1,35 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect } from "react";
 import ProductAPI from "./api/ProductAPI";
+import { useState } from "react";
 import axios from "axios";
 import UserAPI from "./api/UserAPI";
 
-export const GlobalState = createContext();
+export const GlobalState = createContext()
 
-export const DataProvider = ({ children }) => {
-    const [token, setToken] = useState(false);
+export const DataProvider = ({children}) => {
+
+    const [token,setToken] = useState(false)
 
     const refreshToken = async () => {
-        try {
-            const res = await axios.get('https://server1-yt76.onrender.com/user/refresh_token');
-            setToken(res.data.accesstoken);
-             console.error(res.data.accesstoken);
-            // Optionally store token in localStorage for future use
-            localStorage.setItem('token', res.data.accesstoken);
-        } catch (err) {
-            console.error("Failed to refresh token:", err);
-            // Handle errors, e.g., by redirecting to login
-        }
-    };
+        const res = await axios.get('/user/refresh_token')
 
-    useEffect(() => {
-        const firstLogin = localStorage.getItem('firstLogin');
-        if (firstLogin) {
-            refreshToken();
-        }
-    }, []);
+        setToken(res.data.accesstoken)
+    }
+
+    useEffect(()=>{
+        const firstLogin = localStorage.getItem('firstLogin')
+        if(firstLogin) refreshToken()
+    },[])
 
     const state = {
-        token: [token, setToken],
-        productsAPI: ProductAPI(),
-        userAPI: UserAPI(token),
-    };
+        token: [token,setToken],
+        productsAPI:ProductAPI(),
+        userAPI:UserAPI(token)
+    }
 
-    return (
+    return(
         <GlobalState.Provider value={state}>
             {children}
         </GlobalState.Provider>
-    );
-};
+    )
+}
