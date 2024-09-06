@@ -11,7 +11,7 @@ export const DataProvider = ({children}) => {
     const [token,setToken] = useState(false)
 
     const refreshToken = async () => {
-        const res = await axios.get('/user/refresh_token')
+        const res = await axios.get('/user/refresh_token', { withCredentials: true })
 
         setToken(res.data.accesstoken)
     }
