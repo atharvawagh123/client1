@@ -4,32 +4,37 @@ import { useState } from "react";
 import axios from "axios";
 import UserAPI from "./api/UserAPI";
 
-export const GlobalState = createContext()
+export const GlobalState = createContext();
 
-export const DataProvider = ({children}) => {
-
-    const [token,setToken] = useState(false)
+export const DataProvider = ({ children }) => {
+    const [token, setToken] = useState(false);
 
     const refreshToken = async () => {
-        const res = await axios.get('https://server1-yt76.onrender.com/user/refresh_token');
+        try {
+            const res = await axios.get('https://server1-yt76.onrender.com/user/refresh_token', {
+                withCredentials: true
+            });
+            setToken(res.data.accesstoken); // Set token if the request is successful
+        } catch (error) {
+            console.error('Error while refreshing token:', error.message);
+            // Optionally handle the error further (e.g., show a message, redirect to login, etc.)
+        }
+    };
 
-        setToken(res.data.accesstoken)
-    }
-
-    useEffect(()=>{
-        const firstLogin = localStorage.getItem('firstLogin')
-        if(firstLogin) refreshToken()
-    },[])
+    useEffect(() => {
+        const firstLogin = localStorage.getItem('firstLogin');
+        if (firstLogin) refreshToken(); // Call refreshToken if user is logged in
+    }, []);
 
     const state = {
-        token: [token,setToken],
-        productsAPI:ProductAPI(),
-        userAPI:UserAPI(token)
-    }
+        token: [token, setToken],
+        productsAPI: ProductAPI(),
+        userAPI: UserAPI(token),
+    };
 
-    return(
+    return (
         <GlobalState.Provider value={state}>
             {children}
         </GlobalState.Provider>
-    )
-}
+    );
+};
