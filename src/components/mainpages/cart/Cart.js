@@ -15,7 +15,7 @@ const Cart = () => {
     try {
       console.log(email,index)
 // Send the index number to the backend along with the email and updated cart
-      const res = await axios.post('/user/cart/delete', {
+      const res = await axios.post('https://server1-yt76.onrender.com/user/cart/delete', {
         email,
         index,    
       });
@@ -59,7 +59,7 @@ const Cart = () => {
 
   const sendEmail = async () => {
     try {
-      const res = await axios.post('/users/send-cart', { email, cart });
+      const res = await axios.post('https://server1-yt76.onrender.com/users/send-cart', { email, cart });
       alert(res.data.msg);
     } catch (err) {
       setError(err.response?.data?.msg || 'Error sending email.');

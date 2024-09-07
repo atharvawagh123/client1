@@ -46,7 +46,7 @@ const CreateProduct = () => {
         setMessage('');
 
         try {
-            const response = await axios.post('/api/products', product);
+            const response = await axios.post('https://server1-yt76.onrender.com/api/products', product);
             setMessage('Product created successfully!');
             console.log(response.data);
         } catch (error) {

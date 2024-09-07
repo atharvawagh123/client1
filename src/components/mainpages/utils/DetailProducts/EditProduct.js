@@ -33,7 +33,7 @@ const EditProduct = () => {
     const handleSubmit = async e => {
         e.preventDefault();
         try {
-            await axios.put(`/api/products/${id}`, product);
+            await axios.put(`https://server1-yt76.onrender.com/api/products/${id}`, product);
             alert('Product updated successfully');
         } catch (err) {
             alert(err.response.data.msg);

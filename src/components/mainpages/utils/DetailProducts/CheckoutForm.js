@@ -34,13 +34,13 @@ const CheckoutForm = () => {
 
         try {
             // Post to send-email endpoint
-            await axios.post('/users/send-email', {
+            await axios.post('https://server1-yt76.onrender.com/users/send-email', {
                 ...formData,
                 product_id
             });
 
             // Post to send-database endpoint
-            await axios.post('/users/send-database', {
+            await axios.post('https://server1-yt76.onrender.com/users/send-database', {
                 email: formData.email,
                 product_id
             });

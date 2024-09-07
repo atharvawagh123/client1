@@ -13,7 +13,7 @@ const BtnRender = ({ product }) => {
   const handleDelete = async () => {
     if (window.confirm("Are you sure you want to delete this product?")) {
       try {
-        await axios.delete(`/api/products/${product._id}`);
+        await axios.delete(`https://server1-yt76.onrender.com/api/products/${product._id}`);
         setProducts(products.filter(prod => prod._id !== product._id));
         alert('Product deleted successfully.');
       } catch (err) {

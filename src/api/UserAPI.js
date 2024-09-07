@@ -10,7 +10,7 @@ const UserAPI = (token) => {
     const getUser = async () => {
         if (token) {
             try {
-                const res = await axios.get('/user/infor', {
+                const res = await axios.get('https://server1-yt76.onrender.com/user/infor', {
                     headers: { Authorization: token }
                 });
                 console.log(res.data.name)

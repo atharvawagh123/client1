@@ -38,7 +38,7 @@ const DetailProduct = () => {
 
   const deleteProduct = async () => {
     try {
-      await axios.delete(`/api/products/${params.id}`);
+      await axios.delete(`https://server1-yt76.onrender.com/api/products/${params.id}`);
       // Redirect or update the state after deletion
       alert('Product deleted successfully');
       // Redirect or handle state update as needed
@@ -49,7 +49,7 @@ const DetailProduct = () => {
 
   const fetchComments = async (productId) => {
     try {
-      const res = await axios.get(`/api/products/${productId}/comments`);
+      const res = await axios.get(`https://server1-yt76.onrender.com/api/products/${productId}/comments`);
       setComments(res.data.comments || []);
     } catch (err) {
       console.error('Error fetching comments:', err);
@@ -63,7 +63,7 @@ const DetailProduct = () => {
     }
 
     try {
-      const res = await axios.post(`/api/products/${params.id}/comments`, {
+      const res = await axios.post(`https://server1-yt76.onrender.com/api/products/${params.id}/comments`, {
         username,
         comment: newComment.trim(),
       });
@@ -76,7 +76,7 @@ const DetailProduct = () => {
 
   const deleteComment = async (commentId) => {
     try {
-      const res = await axios.delete(`/api/products/${params.id}/comments/${commentId}`);
+      const res = await axios.delete(`https://server1-yt76.onrender.com/api/products/${params.id}/comments/${commentId}`);
       setComments(res.data.comments);
     } catch (err) {
       console.error('Error deleting comment:', err);

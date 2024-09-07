@@ -12,7 +12,7 @@ const OrderList = () => {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                const response = await axios.get('/orders', {
+                const response = await axios.get('https://server1-yt76.onrender.com/orders', {
                     params: { email } // Pass email as a query parameter
                 });
                 setOrders(response.data);

@@ -30,7 +30,7 @@ const Search = () => {
 
     const fetchSuggestions = async () => {
         try {
-            const response = await axios.get(`/api/products/suggestions?title=${search}`);
+            const response = await axios.get(`https://server1-yt76.onrender.com/api/products/suggestions?title=${search}`);
             setSuggestions(response.data.products);
         } catch (error) {
             console.error('Error fetching suggestions:', error);
@@ -39,7 +39,7 @@ const Search = () => {
 
     const fetchProducts = async () => {
         try {
-            const response = await axios.get(`/api/products?title=${search}&price[lte]=${priceRange}`);
+            const response = await axios.get(`https://server1-yt76.onrender.com/api/products?title=${search}&price[lte]=${priceRange}`);
             setProducts(response.data.products);
         } catch (error) {
             console.error('Error fetching products:', error);
